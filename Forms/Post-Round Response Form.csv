@@ -1,0 +1,34 @@
+Carimbo de data/hora,Endereço de e-mail,Você utilizou IA para resolver seu problema?,O quão difícil você considerou o exercício que acabou de resolver?,O quanto você conseguiu seguir o ciclo TDD (escrever teste → implementar → refatorar)?  ,"Em sua opinião, o uso do TDD neste exercício foi:",Você se sente confiante de que seu código está correto? ,Você se sente confiante de que seus testes cobrem os principais cenários?  ,O quanto a IA ajudou você na resolução do exercício?,Como você utilizou a saída da IA nos testes de TDD? ,De qual maneira a IA te ajudou na resolução dos problemas?,O que você achou mais fácil na resolução deste exercício?,O que você achou mais difícil na resolução deste exercício?,Algum comentário adicional sobre sua experiência nesta rodada?
+27/10/2025 18:46:46,,Sim,3,2,3,5,4,4,Adaptei parcialmente,"Ela fez a função usada do problema, e para entender um pouco sobre.",Fazer o assert ;-;,"Apesar de ter usado a IA para criar a função, eu acharia difícil pensar em como eu iria fazer a função (no caso o que foi pedido).",
+27/10/2025 18:51:33,rgm54594@comp.uems.br,Não,2,3,3,5,3,,,ChatGPT,Código não foi muito complexo ,Nada,
+27/10/2025 18:52:47,,Sim,2,3,3,3,3,4,Adaptei parcialmente,Me ajudando na lógica da função principal ,Depois de pegar a lógica escrever fica fácil ,Pensar no teste antes de escrever ,
+27/10/2025 19:05:43,,Sim,3,1,3,5,1,4,Usei diretamente sem modificações,Acabou facilitando em que funções eu poderia usar na resolução,o teste 2,o teste 1,nenhum
+27/10/2025 19:06:04,,Sim,1,3,1,4,4,3,Adaptei parcialmente,"Ajudou a relembrar os conceitos de mdc, e na alocação dos dígitos do ex2, em um array","O exercício não exigia nada muito complexo e somente com conceitos básicos de já é possível realizar sua resolução, exigindo muitas linhas de código.",Relembrar conceitos de matemática básica e alguns conteúdos iniciais em C,Não 
+27/10/2025 19:06:38,,Sim,3,2,4,2,3,5,Usei diretamente sem modificações,A fazer,Pensar nos testes,Fazer rodar,
+27/10/2025 19:08:18,rgm52254@comp.uems.br,Não,2,4,3,5,4,,,Não usei ia,Exercícios que aprendemos deis de muito cedo e de certa forma dominamos,Começar a pensar na lógica que iria ser usada,Acredito que não
+27/10/2025 19:08:26,rgm52660@comp.uems.br,Não,2,3,2,3,3,,,Não foi usado,Fazer o programa,Pensar nos testes,
+27/10/2025 19:09:07,,Sim,4,1,1,4,3,5,Usei diretamente sem modificações,Praticamente não deixou dúvidas,A forma como a função do 2º exercício foi simples,O exercício 1,Eu acabei não entendendo que era preciso usar agora os Tdd para realização dos exercícios 
+27/10/2025 19:13:31,rgm54592@comp.uems.br,Não,4,4,3,3,3,,,"Não usei, apenas o google",Montar a lógica na minha cabeça ,Implementar minha lógica ,Muito brabo
+27/10/2025 19:14:03,gastardellopedro@gmail.com,Não,4,4,3,3,3,,,não usei,montar o codigo,a desenvolver o tdd,
+27/10/2025 19:15:37,,Sim,2,3,4,5,5,4,Adaptei parcialmente,me ajudou a fazer testes de mesa ,contas matemáticas,a lógica,
+27/10/2025 19:17:01,rgm54581@comp.uems.br,Não,4,4,4,4,4,,,Não ajudou,Os testes,Entender as regras matematicas envolvidas ,Nao
+27/10/2025 19:23:00,,Sim,4,3,4,2,3,4,Usei diretamente sem modificações,me explicou como funcionanva o tdd e como utilizalo,introduzir o tdd ,lembrar como funcionava chamar os arquivos separados .h .c e o main principal,extremamente interessante usar o tdd
+27/10/2025 19:23:26,rgm55405@comp.uems.br,Não,3,4,4,4,1,,,Não usei,Pensar na formula,Escrever,
+27/10/2025 19:23:49,,Sim,5,3,3,4,2,5,Adaptei parcialmente,"A como fazer o código funcionar, verificar oque eu poderia fazer diferente pra dar certo.",É um exercício pequeno,Entender como usar o assert e usar a estrutura correta para que o código funcionasse ,Não 
+27/10/2025 19:24:06,joaopedroinacio.f79@gmail.com,Não,3,2,2,1,1,,,Não usei ,O int,"Não é muito difícil, só faltou um pouco de tempo pra eu pensar ",
+27/10/2025 19:35:14,,Sim,3,1,2,5,5,5,Reescrevi quase tudo,Na formulação completa,Tudo,Tudo,Chat é foda
+27/10/2025 19:36:06,,Sim,1,1,1,5,5,4,Usei diretamente sem modificações,em tudo,o atividades,como falar com o chat,o chat e foda
+27/10/2025 19:39:38,,Sim,4,4,4,4,4,4,Adaptei parcialmente,O codigo,Usar a ia,Pensar,Chat é foda
+27/10/2025 19:39:42,rgm54585@comp.uems.br,Não,3,1,1,4,2,,,nada,A questão de conversão,Tudo,os mlk é zika
+27/10/2025 19:40:09,,Sim,1,3,3,4,4,4,Adaptei parcialmente,As partes que eu não sabia,"Com IA fica bem fácil, mas tem que prestar atenção pra ver se não tem ""algum"" erro",Nada,
+27/10/2025 19:42:18,pedroapf67@gmail.com,Não,2,4,4,4,4,,,Ela ajuda a relembrar as incertezas.,A conversao de C para F.,Q manipulação da string.,Negativo.
+27/10/2025 19:42:42,rgm54594@comp.uems.br,Não,3,4,3,5,5,,,Nenhuma ,Tudo,Nada,
+27/10/2025 19:43:03,rgm54586@comp.uems.br,Não,1,1,1,5,5,,,-,Não tinha nada de difícil ,Nada,Não 
+27/10/2025 19:47:02,kelvinhirokawa22007@gmail.com,Não,2,3,3,3,4,,,nada,nada dificil,nada facil,interessante
+27/10/2025 19:47:42,rgm54589@comp.uems.br,Não,4,3,3,3,4,,,nao utilizei ia,a entrada dos itens,parte lógica ,
+27/10/2025 19:52:54,,Sim,4,4,4,5,4,4,Usei diretamente sem modificações,"No primeiro exercício fez a parte dos testes.
+No segundo fez o código completo com testes.",Os testes,Os códigos em especial o último ,
+27/10/2025 19:57:12,henricogarcia123@gmail.com,Não,3,3,4,4,3,,,Não usei ,Quando se usa assert descobre se está certo logo no início ,Lógica ,
+27/10/2025 19:58:58,rgm54596@comp.uems.br,Não,5,2,3,1,2,,,"Nesse não usei, mas fez falta. Usei pesquisa no Google ",Não consegui fazer,Não consegui fazer,Não 
+27/10/2025 20:00:09,,Sim,2,5,3,5,5,4,Adaptei parcialmente,"Na velocidade da resolução, com ela ficou mais claro qual caminho percorrer.","Pelos mesmos motivos que disse anteriormente, com a IA fica mais claro.",Manipulação da string.,Acredito que não.
+27/10/2025 20:06:59,rgm53064@comp.uems.br,Não,2,5,4,4,5,,,Não usei,"Não teve uma parte fácil, não diria que tem uma parte do código facil, a não ser o assert.",Incluir os possiveis casos que podem aparecer.,
