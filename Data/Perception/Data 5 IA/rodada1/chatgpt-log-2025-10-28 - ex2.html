@@ -1,0 +1,261 @@
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>ChatGPT Conversation Log</title>
+          <style>
+            :root {
+              --primary-color: #FFF;
+              --user-color: #ff3333;
+              --font-size: 16px;
+            }
+          
+            body {
+              font-family: ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;
+              font-size: var(--font-size);
+              background-color: #212121;
+              color: var(--primary-color);
+              padding: 20px;
+              margin: 0 auto;
+              line-height: 1.5;
+            }
+            .header {
+              text-align: center;
+              margin-bottom: 30px;
+              border-bottom: 2px dashed var(--primary-color);
+              padding-bottom: 15px;
+              max-width: 1200px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .title {
+              font-size: 24px;
+              font-weight: bold;
+              margin: 0;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            }
+            .timestamp {
+              color: #00cc00;
+              font-size: 14px;
+              margin-top: 10px;
+            }
+            .conversation {
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 20px;
+            }
+            .message {
+              margin-bottom: 20px;
+              padding: 10px 20px;
+              border-radius: 18px;
+              width: fit-content;
+              max-width: 80%;
+              clear: both;
+              overflow: hidden;
+            }
+            .user-message {
+              float: right;
+              background-color: #303030;
+            }
+            .assistant-message {
+              float: left;
+            }
+            .role {
+              font-weight: bold;
+              margin-bottom: 5px;
+              text-transform: uppercase;
+            }
+            .user-message .role {
+              color: #ff3333;
+              text-align: right;
+            }
+            .assistant-message .role {
+              color: var(--primary-color);
+            }
+            .content {
+              user-select: text;
+              word-wrap: break-word;
+            }
+            table {
+              border: 1px solid var(--primary-color);
+              border-collapse: collapse;
+              width: 100%;
+              margin: 1em 0;
+              table-layout: fixed;
+            }
+            th, td {
+                border: 1px solid var(--primary-color);
+                text-align: center;
+                height: 30px;
+                vertical-align: middle;
+                padding: 0 10px;
+            }
+            .content h1 { font-size: 2em; margin: 0.67em 0; }
+            .content h2 { font-size: 1.5em; margin: 0.75em 0; }
+            .content h3 { font-size: 1.17em; margin: 0.83em 0; }
+            .content h4 { font-size: 1em; margin: 1.12em 0; }
+            .content h5 { font-size: 0.83em; margin: 1.5em 0; }
+            .content h6 { font-size: 0.75em; margin: 1.67em 0; }
+            .code-block {
+              background-color: #2a2a2a !important;
+              color: #fff !important;
+              padding: 15px !important;
+              margin: 10px 0 !important;
+              border-radius: 5px !important;
+              border: 1px solid var(--primary-color) !important;
+              font-family: "Courier New", monospace !important;
+              overflow-x: auto !important;
+              width: auto !important;
+              max-width: 100% !important;
+              box-sizing: border-box !important;
+            }
+            li{
+              margin:15px 0;
+            }
+            .inline-code{
+              background: var(--primary-color);
+              color:#000;
+              padding:2px 5px;
+            }
+            /* Basic highlight.js theme */
+            .hljs {
+              background: transparent;
+              color: #fff;
+            }
+            .hljs-keyword { color: #ff79c6; }
+            .hljs-string { color: #f1fa8c; }
+            .hljs-number { color: #bd93f9; }
+            .hljs-function { color: #50fa7b; }
+            .hljs-comment { color: #6272a4; }
+            .hljs-title { color: #50fa7b; }
+            .hljs-params { color: #f8f8f2; }
+            .hljs-built_in { color: #8be9fd; }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <h1 class="title">== ChatGPT Log ==</h1>
+            <div class="timestamp">[27/10/2025, 23:54:20]</div>
+          </div>
+          <div class="conversation">
+    
+        <div class="message user-message">
+          <div class="content">crie um codigo em C que recebe um numero , separe seu digitos e faça a soma entre eles, ja aplicando o tdd com assert</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>Perfeito 👍
+Vamos criar um <strong>exemplo completo em C</strong> que:</p>
+<ol>
+<li>
+<p>Recebe um número inteiro;</p>
+</li>
+<li>
+<p>Separa seus dígitos;</p>
+</li>
+<li>
+<p>Soma esses dígitos;</p>
+</li>
+<li>
+<p>Aplica <strong>TDD (Test-Driven Development)</strong> com <code>assert</code> para validar a função principal.</p>
+</li>
+</ol>
+
+<h3>🧠 Etapas do TDD</h3>
+<ol>
+<li>
+<p><strong>Escrever o teste primeiro</strong> (<code>assert</code> testando o comportamento esperado).</p>
+</li>
+<li>
+<p><strong>Escrever o código mínimo</strong> para passar no teste.</p>
+</li>
+<li>
+<p><strong>Refatorar</strong> (melhorar o código mantendo os testes verdes).</p>
+</li>
+</ol>
+
+<h3>✅ Código completo em C</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-c code-block hljs" style="display: block;" data-highlighted="yes"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;assert.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-comment">/**
+ * Função que soma os dígitos de um número inteiro.
+ * Exemplo: 123 -&gt; 1 + 2 + 3 = 6
+ */</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">soma_digitos</span><span class="hljs-params">(<span class="hljs-type">int</span> numero)</span> {
+    <span class="hljs-keyword">if</span> (numero &lt; <span class="hljs-number">0</span>)
+        numero = -numero; <span class="hljs-comment">// trata números negativos</span>
+
+    <span class="hljs-type">int</span> soma = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (numero &gt; <span class="hljs-number">0</span>) {
+        soma += numero % <span class="hljs-number">10</span>;
+        numero /= <span class="hljs-number">10</span>;
+    }
+    <span class="hljs-keyword">return</span> soma;
+}
+
+<span class="hljs-comment">/**
+ * Função de testes (TDD)
+ */</span>
+<span class="hljs-type">void</span> <span class="hljs-title function_">testes</span><span class="hljs-params">()</span> {
+    <span class="hljs-comment">// Testes básicos</span>
+    assert(soma_digitos(<span class="hljs-number">0</span>) == <span class="hljs-number">0</span>);
+    assert(soma_digitos(<span class="hljs-number">5</span>) == <span class="hljs-number">5</span>);
+    assert(soma_digitos(<span class="hljs-number">12</span>) == <span class="hljs-number">3</span>);
+    assert(soma_digitos(<span class="hljs-number">12345</span>) == <span class="hljs-number">15</span>);
+
+    <span class="hljs-comment">// Teste com número negativo</span>
+    assert(soma_digitos(<span class="hljs-number">-456</span>) == <span class="hljs-number">15</span>);
+
+    <span class="hljs-comment">// Teste com número grande</span>
+    assert(soma_digitos(<span class="hljs-number">9999</span>) == <span class="hljs-number">36</span>);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"✅ Todos os testes passaram!\n"</span>);
+}
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+    <span class="hljs-comment">// Primeiro executa os testes TDD</span>
+    testes();
+
+    <span class="hljs-type">int</span> numero;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Digite um número: "</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;numero);
+
+    <span class="hljs-type">int</span> resultado = soma_digitos(numero);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"A soma dos dígitos de %d é: %d\n"</span>, numero, resultado);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+
+<h3>💡 Como funciona</h3>
+<ol>
+<li>
+<p>A função <code>soma_digitos()</code> faz a lógica de decomposição e soma.</p>
+</li>
+<li>
+<p>A função <code>testes()</code> usa <code>assert()</code> para garantir que ela funcione corretamente.</p>
+</li>
+<li>
+<p>Se todos os <code>assert</code> passarem, o programa imprime “✅ Todos os testes passaram!”.</p>
+</li>
+<li>
+<p>Depois, o usuário pode digitar um número e ver o resultado.</p>
+</li>
+</ol>
+
+<h3>⚙️ Como compilar e executar</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-bash code-block hljs" style="display: block;" data-highlighted="yes">gcc soma_digitos_tdd.c -o soma
+./soma
+</code></pre>
+
+<p>Quer que eu te mostre a <strong>primeira versão falhando (TDD passo a passo)</strong> antes de chegar nesse código final (ou seja, como seria o “red → green → refactor”)?</p></div>
+        </div>
+      
+          </div>
+        </body>
+      </html>
+    

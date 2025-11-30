@@ -1,0 +1,277 @@
+﻿Haja como um Engenheiro de software e crie para o código testes TDD usando assert: #include <stdio.h> #include <ctype.h> int main() { char texto[100]; int i, contador = 0; printf("digite uma frase: "); fgets(texto, sizeof(texto), stdin); for (i = 0; texto[i] != '\0'; i++) { char c = tolower(texto[i]); if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') { contador++; } } printf("quantidade de vogais: %d\n", contador); return 0; }
+O ChatGPT disse:
+Perfeito 👍 — você quer aplicar TDD (Test Driven Development) a esse código em C, que conta vogais em uma frase.
+Para isso, primeiro extrairemos a lógica principal (contagem de vogais) em uma função testável, e depois criaremos testes com assert() que verificam o comportamento esperado.
+________________
+
+
+🧩 1. Refatorar o código para ser testável
+Em TDD, começamos criando funções puras que possam ser testadas sem entrada do usuário (stdin).
+Aqui vai a refatoração:
+#include <stdio.h>
+#include <ctype.h>
+#include <assert.h>
+#include <string.h>
+
+
+// Função que conta o número de vogais em uma string
+int contar_vogais(const char *texto) {
+    int contador = 0;
+    for (int i = 0; texto[i] != '\0'; i++) {
+        char c = tolower(texto[i]);
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+
+// Função de testes (TDD)
+void testes_contar_vogais() {
+    // Teste 1: string vazia
+    assert(contar_vogais("") == 0);
+
+
+    // Teste 2: sem vogais
+    assert(contar_vogais("rhythms") == 0);
+
+
+    // Teste 3: apenas vogais
+    assert(contar_vogais("aeiou") == 5);
+
+
+    // Teste 4: mistura de maiúsculas e minúsculas
+    assert(contar_vogais("AeIoU") == 5);
+
+
+    // Teste 5: frase com espaços e pontuação
+    assert(contar_vogais("Ola, tudo bem?") == 5);
+
+
+    // Teste 6: palavra longa
+    assert(contar_vogais("computador") == 4);
+
+
+    // Teste 7: frase com acentos (não devem contar)
+    assert(contar_vogais("ação") == 2);  // 'a' e 'o' contam, 'ã' não
+
+
+    printf("✅ Todos os testes passaram com sucesso!\n");
+}
+
+
+int main() {
+    // Etapa de TDD: primeiro rodar os testes
+    testes_contar_vogais();
+
+
+    // Depois, executar a lógica principal com input do usuário
+    char texto[100];
+    printf("Digite uma frase: ");
+    fgets(texto, sizeof(texto), stdin);
+    texto[strcspn(texto, "\n")] = '\0'; // remove \n
+
+
+    int resultado = contar_vogais(texto);
+    printf("Quantidade de vogais: %d\n", resultado);
+
+
+    return 0;
+}
+
+
+________________
+
+
+🧠 Explicação
+* contar_vogais() → função pura e reutilizável.
+
+* testes_contar_vogais() → simula os casos de teste do TDD usando assert().
+
+* O main() roda primeiro os testes, garantindo que tudo esteja certo antes da interação com o usuário.
+
+________________
+
+
+🧪 Execução
+Compile e execute:
+gcc -o contar_vogais teste_vogais.c
+./contar_vogais
+
+
+Saída esperada:
+✅ Todos os testes passaram com sucesso!
+Digite uma frase:
+
+
+________________
+
+
+Quer que eu adicione testes automatizados via CUnit ou Unity (frameworks de testes para C)?
+Isso deixaria o código mais próximo de um pipeline profissional (como TDD real).
+Você disse:
+haja como um Engenheiro de software e crie um programa que receba um número e uma unidade de medida (C ou F) e converta o valor para a outra unidade, use TDD e assert para testar o código
+O ChatGPT disse:
+Pensou por 8s
+Ótimo — abaixo está um programa em C escrito como um engenheiro de software: a lógica de conversão foi separada numa função testável e há uma suíte TDD usando assert() para validar os casos importantes. O main() executa os testes primeiro (TDD) e, se tudo passar, pede entrada do usuário para converter um valor.
+Copie, compile e rode.
+#include <stdio.h>
+#include <ctype.h>
+#include <assert.h>
+#include <math.h>
+
+
+/*
+ * convert_temperature:
+ *   input  - valor de temperatura
+ *   unit   - 'C' ou 'F' (aceita maiúsculas/minúsculas)
+ *   result - ponteiro onde será escrito o valor convertido
+ *
+ * Retorna:
+ *   0  - sucesso (result preenchido)
+ *  -1  - unidade inválida
+ *
+ * Fórmulas:
+ *   C -> F: F = C * 9/5 + 32
+ *   F -> C: C = (F - 32) * 5/9
+ */
+int convert_temperature(double input, char unit, double *result) {
+    if (!result) return -1;
+    char u = toupper((unsigned char)unit);
+    if (u == 'C') {
+        *result = input * 9.0 / 5.0 + 32.0;
+        return 0;
+    } else if (u == 'F') {
+        *result = (input - 32.0) * 5.0 / 9.0;
+        return 0;
+    } else {
+        return -1;
+    }
+}
+
+
+/* Função utilitária para comparar doubles com tolerância */
+int quase_igual(double a, double b, double eps) {
+    return fabs(a - b) <= eps;
+}
+
+
+/* Suíte de testes TDD usando assert */
+void testes_convert_temperature() {
+    double out;
+    const double eps = 1e-6;
+
+
+    /* Teste 1: 0°C -> 32°F */
+    assert(convert_temperature(0.0, 'C', &out) == 0);
+    assert(quase_igual(out, 32.0, eps));
+
+
+    /* Teste 2: 100°C -> 212°F */
+    assert(convert_temperature(100.0, 'C', &out) == 0);
+    assert(quase_igual(out, 212.0, eps));
+
+
+    /* Teste 3: 32°F -> 0°C */
+    assert(convert_temperature(32.0, 'F', &out) == 0);
+    assert(quase_igual(out, 0.0, eps));
+
+
+    /* Teste 4: -40°C -> -40°F (ponto especial onde são iguais) */
+    assert(convert_temperature(-40.0, 'C', &out) == 0);
+    assert(quase_igual(out, -40.0, eps));
+
+
+    /* Teste 5: -40°F -> -40°C (simetria) */
+    assert(convert_temperature(-40.0, 'F', &out) == 0);
+    assert(quase_igual(out, -40.0, eps));
+
+
+    /* Teste 6: letra minúscula funciona */
+    assert(convert_temperature(0.0, 'c', &out) == 0);
+    assert(quase_igual(out, 32.0, eps));
+    assert(convert_temperature(32.0, 'f', &out) == 0);
+    assert(quase_igual(out, 0.0, eps));
+
+
+    /* Teste 7: valores com casas decimais */
+    assert(convert_temperature(36.6, 'C', &out) == 0);
+    assert(quase_igual(out, 97.88, 1e-3)); /* 36.6*9/5 +32 = 97.88 */
+
+
+    /* Teste 8: unidade inválida deve retornar -1 e não tocar result */
+    double sentinel = 12345.6789;
+    out = sentinel;
+    assert(convert_temperature(25.0, 'K', &out) == -1);
+    assert(quase_igual(out, sentinel, eps)); /* result não foi alterado */
+
+
+    /* Teste 9: ponteiro result nulo -> erro */
+    assert(convert_temperature(0.0, 'C', NULL) == -1);
+
+
+    printf("✅ Todos os testes TDD passaram.\n");
+}
+
+
+int main(void) {
+    /* Roda os testes TDD primeiro */
+    testes_convert_temperature();
+
+
+    /* Depois faz a interação com usuário */
+    double valor;
+    char unidade;
+    double resultado;
+
+
+    printf("\nConversor C <-> F\n");
+    printf("Digite o valor seguido da unidade (C ou F), ex.: 36.6 C\n");
+    printf("Entrada: ");
+
+
+    if (scanf("%lf %c", &valor, &unidade) != 2) {
+        fprintf(stderr, "Entrada inválida. Use formato: <numero> <unidade>\n");
+        return 1;
+    }
+
+
+    if (convert_temperature(valor, unidade, &resultado) == 0) {
+        char u = toupper((unsigned char)unidade);
+        if (u == 'C') {
+            printf("%.6g %c = %.6g F\n", valor, u, resultado);
+        } else { /* 'F' */
+            printf("%.6g %c = %.6g C\n", valor, u, resultado);
+        }
+    } else {
+        fprintf(stderr, "Unidade inválida: %c. Use 'C' ou 'F'.\n", unidade);
+        return 1;
+    }
+
+
+    return 0;
+}
+
+
+Como compilar e executar
+gcc -o conversor conversor.c -lm
+./conversor
+
+
+Observações
+   * A suíte TDD usa assert(). Se algum teste falhar, o programa abortará com uma asserção falhada, revelando o problema imediatamente (prática básica de TDD).
+
+   * A comparação de double é feita com tolerância (quase_igual) para evitar problemas de precisão.
+
+   * A função convert_temperature retorna -1 para unidade inválida — isso também é testado.
+
+   * Se quiser, posso:
+
+      * Transformar os testes em um framework unitário (Unity, CUnit) para integração com CI.
+
+      * Adicionar suporte a Kelvin (K) mantendo TDD.
+
+      * Produzir versões em C++ ou Python com testes automatizados (pytest).
+
+Quer que eu acrescente suporte a Kelvin (K) com testes TDD também?

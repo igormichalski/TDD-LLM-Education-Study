@@ -1,0 +1,440 @@
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>ChatGPT Conversation Log</title>
+          <style>
+            :root {
+              --primary-color: #FFF;
+              --user-color: #ff3333;
+              --font-size: 16px;
+            }
+          
+            body {
+              font-family: ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;
+              font-size: var(--font-size);
+              background-color: #212121;
+              color: var(--primary-color);
+              padding: 20px;
+              margin: 0 auto;
+              line-height: 1.5;
+            }
+            .header {
+              text-align: center;
+              margin-bottom: 30px;
+              border-bottom: 2px dashed var(--primary-color);
+              padding-bottom: 15px;
+              max-width: 1200px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .title {
+              font-size: 24px;
+              font-weight: bold;
+              margin: 0;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            }
+            .timestamp {
+              color: #00cc00;
+              font-size: 14px;
+              margin-top: 10px;
+            }
+            .conversation {
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 20px;
+            }
+            .message {
+              margin-bottom: 20px;
+              padding: 10px 20px;
+              border-radius: 18px;
+              width: fit-content;
+              max-width: 80%;
+              clear: both;
+              overflow: hidden;
+            }
+            .user-message {
+              float: right;
+              background-color: #303030;
+            }
+            .assistant-message {
+              float: left;
+            }
+            .role {
+              font-weight: bold;
+              margin-bottom: 5px;
+              text-transform: uppercase;
+            }
+            .user-message .role {
+              color: #ff3333;
+              text-align: right;
+            }
+            .assistant-message .role {
+              color: var(--primary-color);
+            }
+            .content {
+              user-select: text;
+              word-wrap: break-word;
+            }
+            table {
+              border: 1px solid var(--primary-color);
+              border-collapse: collapse;
+              width: 100%;
+              margin: 1em 0;
+              table-layout: fixed;
+            }
+            th, td {
+                border: 1px solid var(--primary-color);
+                text-align: center;
+                height: 30px;
+                vertical-align: middle;
+                padding: 0 10px;
+            }
+            .content h1 { font-size: 2em; margin: 0.67em 0; }
+            .content h2 { font-size: 1.5em; margin: 0.75em 0; }
+            .content h3 { font-size: 1.17em; margin: 0.83em 0; }
+            .content h4 { font-size: 1em; margin: 1.12em 0; }
+            .content h5 { font-size: 0.83em; margin: 1.5em 0; }
+            .content h6 { font-size: 0.75em; margin: 1.67em 0; }
+            .code-block {
+              background-color: #2a2a2a !important;
+              color: #fff !important;
+              padding: 15px !important;
+              margin: 10px 0 !important;
+              border-radius: 5px !important;
+              border: 1px solid var(--primary-color) !important;
+              font-family: "Courier New", monospace !important;
+              overflow-x: auto !important;
+              width: auto !important;
+              max-width: 100% !important;
+              box-sizing: border-box !important;
+            }
+            li{
+              margin:15px 0;
+            }
+            .inline-code{
+              background: var(--primary-color);
+              color:#000;
+              padding:2px 5px;
+            }
+            /* Basic highlight.js theme */
+            .hljs {
+              background: transparent;
+              color: #fff;
+            }
+            .hljs-keyword { color: #ff79c6; }
+            .hljs-string { color: #f1fa8c; }
+            .hljs-number { color: #bd93f9; }
+            .hljs-function { color: #50fa7b; }
+            .hljs-comment { color: #6272a4; }
+            .hljs-title { color: #50fa7b; }
+            .hljs-params { color: #f8f8f2; }
+            .hljs-built_in { color: #8be9fd; }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <h1 class="title">== ChatGPT Log ==</h1>
+            <div class="timestamp">[28/10/2025, 00:36:38]</div>
+          </div>
+          <div class="conversation">
+    
+        <div class="message user-message">
+          <div class="content">P04 – Conversor Celsius ↔ Fahrenheit
+
+Crie um programa que receba um número e uma unidade de medida (C ou F) e converta o valor para a outra unidade.
+
+Exemplos:
+
+
+
+
+
+
+    Entrada: 0 C → Saída: 32 F
+    Entrada: 32 F → Saída: 0 C
+    Entrada: 100 C → Saída: 212 F
+P04 – Conversor Celsius ↔ Fahrenheit
+
+Crie um programa que receba um número e uma unidade de medida (C ou F) e converta o valor para a outra unidade.
+
+Exemplos:
+
+    Entrada: 0 C → Saída: 32 F
+    Entrada: 32 F → Saída: 0 C
+    Entrada: 100 C → Saída: 212 F
+
+</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>Aqui está uma solução simples em <strong>Python</strong> para o problema “P04 – Conversor Celsius ↔ Fahrenheit”:</p>
+
+<h3>🧮 Código:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-python code-block hljs" style="display: block;" data-highlighted="yes"><span class="hljs-comment"># P04 – Conversor Celsius ↔ Fahrenheit</span>
+
+<span class="hljs-comment"># Entrada do usuário</span>
+entrada = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Digite o valor e a unidade (ex: 25 C ou 77 F): "</span>).strip()
+
+<span class="hljs-comment"># Separar valor e unidade</span>
+valor_str, unidade = entrada.split()
+valor = <span class="hljs-built_in">float</span>(valor_str)
+unidade = unidade.upper()
+
+<span class="hljs-comment"># Conversão</span>
+<span class="hljs-keyword">if</span> unidade == <span class="hljs-string">"C"</span>:
+    resultado = (valor * <span class="hljs-number">9</span>/<span class="hljs-number">5</span>) + <span class="hljs-number">32</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"<span class="hljs-subst">{valor:<span class="hljs-number">.1</span>f}</span> C → <span class="hljs-subst">{resultado:<span class="hljs-number">.1</span>f}</span> F"</span>)
+<span class="hljs-keyword">elif</span> unidade == <span class="hljs-string">"F"</span>:
+    resultado = (valor - <span class="hljs-number">32</span>) * <span class="hljs-number">5</span>/<span class="hljs-number">9</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"<span class="hljs-subst">{valor:<span class="hljs-number">.1</span>f}</span> F → <span class="hljs-subst">{resultado:<span class="hljs-number">.1</span>f}</span> C"</span>)
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Unidade inválida! Use 'C' para Celsius ou 'F' para Fahrenheit."</span>)
+</code></pre>
+
+<h3>💡 Exemplos de execução:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">Digite</span> o valor e a unidade (ex: <span class="hljs-number">25</span> C ou <span class="hljs-number">77</span> F): <span class="hljs-number">0</span> C
+<span class="hljs-attribute">0</span>.<span class="hljs-number">0</span> C → <span class="hljs-number">32</span>.<span class="hljs-number">0</span> F
+
+<span class="hljs-attribute">Digite</span> o valor e a unidade (ex: <span class="hljs-number">25</span> C ou <span class="hljs-number">77</span> F): <span class="hljs-number">32</span> F
+<span class="hljs-attribute">32</span>.<span class="hljs-number">0</span> F → <span class="hljs-number">0</span>.<span class="hljs-number">0</span> C
+
+<span class="hljs-attribute">Digite</span> o valor e a unidade (ex: <span class="hljs-number">25</span> C ou <span class="hljs-number">77</span> F): <span class="hljs-number">100</span> C
+<span class="hljs-attribute">100</span>.<span class="hljs-number">0</span> C → <span class="hljs-number">212</span>.<span class="hljs-number">0</span> F
+</code></pre>
+
+<p>Quer que eu mostre uma <strong>versão com interface gráfica (usando Tkinter)</strong> ou apenas o <strong>código em linha de comando</strong> mesmo?</p></div>
+        </div>
+      
+        <div class="message user-message">
+          <div class="content">codigo completo</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>Perfeito 👍
+Aqui está o <strong>código completo e funcional em Python</strong>, pronto para ser executado no seu computador ou em qualquer ambiente Python (como VS Code, Thonny, Replit, etc.).</p>
+
+<h2>🧩 <strong>P04 – Conversor Celsius ↔ Fahrenheit</strong></h2>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-python code-block hljs" style="display: block;" data-highlighted="yes"><span class="hljs-comment"># -------------------------------------------</span>
+<span class="hljs-comment"># P04 – Conversor Celsius ↔ Fahrenheit</span>
+<span class="hljs-comment"># Autor: [Seu Nome]</span>
+<span class="hljs-comment"># Descrição: Converte valores entre Celsius e Fahrenheit.</span>
+<span class="hljs-comment"># -------------------------------------------</span>
+
+<span class="hljs-comment"># Funções de conversão</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">celsius_para_fahrenheit</span>(<span class="hljs-params">c</span>):
+    <span class="hljs-keyword">return</span> (c * <span class="hljs-number">9</span>/<span class="hljs-number">5</span>) + <span class="hljs-number">32</span>
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">fahrenheit_para_celsius</span>(<span class="hljs-params">f</span>):
+    <span class="hljs-keyword">return</span> (f - <span class="hljs-number">32</span>) * <span class="hljs-number">5</span>/<span class="hljs-number">9</span>
+
+
+<span class="hljs-comment"># Programa principal</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"=== Conversor Celsius ↔ Fahrenheit ==="</span>)
+    entrada = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Digite o valor e a unidade (ex: 25 C ou 77 F): "</span>).strip()
+
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-comment"># Separar valor e unidade</span>
+        valor_str, unidade = entrada.split()
+        valor = <span class="hljs-built_in">float</span>(valor_str)
+        unidade = unidade.upper()
+
+        <span class="hljs-comment"># Verificar unidade e converter</span>
+        <span class="hljs-keyword">if</span> unidade == <span class="hljs-string">"C"</span>:
+            resultado = celsius_para_fahrenheit(valor)
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"<span class="hljs-subst">{valor:<span class="hljs-number">.1</span>f}</span> C → <span class="hljs-subst">{resultado:<span class="hljs-number">.1</span>f}</span> F"</span>)
+        <span class="hljs-keyword">elif</span> unidade == <span class="hljs-string">"F"</span>:
+            resultado = fahrenheit_para_celsius(valor)
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"<span class="hljs-subst">{valor:<span class="hljs-number">.1</span>f}</span> F → <span class="hljs-subst">{resultado:<span class="hljs-number">.1</span>f}</span> C"</span>)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"❌ Unidade inválida! Use 'C' para Celsius ou 'F' para Fahrenheit."</span>)
+
+    <span class="hljs-keyword">except</span> ValueError:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"❌ Entrada inválida! Use o formato: número espaço unidade (ex: 25 C)"</span>)
+
+<span class="hljs-comment"># Executar o programa</span>
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    main()
+</code></pre>
+
+<h2>💡 <strong>Exemplos de uso</strong></h2>
+<h3>Entrada:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-basic" style="display: block;" data-highlighted="yes"><span class="hljs-symbol">0 </span>C
+</code></pre>
+<h3>Saída:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">0</span>.<span class="hljs-number">0</span> C → <span class="hljs-number">32</span>.<span class="hljs-number">0</span> F
+</code></pre>
+<h3>Entrada:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-basic" style="display: block;" data-highlighted="yes"><span class="hljs-symbol">32 </span>F
+</code></pre>
+<h3>Saída:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">32</span>.<span class="hljs-number">0</span> F → <span class="hljs-number">0</span>.<span class="hljs-number">0</span> C
+</code></pre>
+<h3>Entrada:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-basic" style="display: block;" data-highlighted="yes"><span class="hljs-symbol">100 </span>C
+</code></pre>
+<h3>Saída:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">100</span>.<span class="hljs-number">0</span> C → <span class="hljs-number">212</span>.<span class="hljs-number">0</span> F
+</code></pre>
+
+<p>Quer que eu te mostre uma <strong>versão com menu interativo</strong> (onde o usuário escolhe o tipo de conversão) também?</p></div>
+        </div>
+      
+        <div class="message user-message">
+          <div class="content">em c</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>Perfeito! 👌
+Aqui está o <strong>código completo em linguagem C</strong> para o programa <strong>P04 – Conversor Celsius ↔ Fahrenheit</strong>.
+O programa recebe um número e uma unidade (<code>C</code> ou <code>F</code>) e converte para a outra.</p>
+
+<h2>🧩 <strong>P04 – Conversor Celsius ↔ Fahrenheit (em C)</strong></h2>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-c code-block hljs" style="display: block;" data-highlighted="yes"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;ctype.h&gt;</span> <span class="hljs-comment">// para toupper()</span></span>
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+    <span class="hljs-type">float</span> valor, resultado;
+    <span class="hljs-type">char</span> unidade;
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"=== Conversor Celsius ↔ Fahrenheit ===\n"</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Digite o valor e a unidade (ex: 25 C ou 77 F): "</span>);
+    
+    <span class="hljs-comment">// Lê um número e um caractere</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%f %c"</span>, &amp;valor, &amp;unidade) != <span class="hljs-number">2</span>) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"❌ Entrada inválida! Use o formato: número espaço unidade (ex: 25 C)\n"</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-comment">// Converte a unidade para maiúscula</span>
+    unidade = <span class="hljs-built_in">toupper</span>(unidade);
+
+    <span class="hljs-comment">// Verifica qual é a unidade e faz a conversão</span>
+    <span class="hljs-keyword">if</span> (unidade == <span class="hljs-string">'C'</span>) {
+        resultado = (valor * <span class="hljs-number">9.0</span> / <span class="hljs-number">5.0</span>) + <span class="hljs-number">32.0</span>;
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.1f C → %.1f F\n"</span>, valor, resultado);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (unidade == <span class="hljs-string">'F'</span>) {
+        resultado = (valor - <span class="hljs-number">32.0</span>) * <span class="hljs-number">5.0</span> / <span class="hljs-number">9.0</span>;
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.1f F → %.1f C\n"</span>, valor, resultado);
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"❌ Unidade inválida! Use 'C' para Celsius ou 'F' para Fahrenheit.\n"</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+
+<h2>💡 <strong>Exemplos de uso</strong></h2>
+<h3>Entrada:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-basic" style="display: block;" data-highlighted="yes"><span class="hljs-symbol">0 </span>C
+</code></pre>
+<h3>Saída:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">0</span>.<span class="hljs-number">0</span> C → <span class="hljs-number">32</span>.<span class="hljs-number">0</span> F
+</code></pre>
+<h3>Entrada:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-basic" style="display: block;" data-highlighted="yes"><span class="hljs-symbol">32 </span>F
+</code></pre>
+<h3>Saída:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">32</span>.<span class="hljs-number">0</span> F → <span class="hljs-number">0</span>.<span class="hljs-number">0</span> C
+</code></pre>
+<h3>Entrada:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-basic" style="display: block;" data-highlighted="yes"><span class="hljs-symbol">100 </span>C
+</code></pre>
+<h3>Saída:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">100</span>.<span class="hljs-number">0</span> C → <span class="hljs-number">212</span>.<span class="hljs-number">0</span> F
+</code></pre>
+
+<h2>🧠 <strong>Como compilar e executar</strong></h2>
+<p>Se estiver usando o terminal:</p>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-bash code-block hljs" style="display: block;" data-highlighted="yes">gcc conversor.c -o conversor
+./conversor
+</code></pre>
+<p>Ou, se estiver no Windows (cmd/prompt):</p>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-bash code-block hljs" style="display: block;" data-highlighted="yes">gcc conversor.c -o conversor.exe
+conversor.exe
+</code></pre>
+
+<p>Quer que eu adicione uma <strong>versão com menu interativo</strong> (para o usuário escolher qual conversão fazer)?</p></div>
+        </div>
+      
+        <div class="message user-message">
+          <div class="content">P03 – Contador de Vogais
+
+Escreva um programa que receba uma string e conte quantas vogais (a, e, i, o, u) existem nela, desconsiderando maiúsculas e minúsculas.
+
+Exemplos:
+
+    Entrada: "ChatGPT" → Saída: 1
+    Entrada: "Inteligência Artificial" → Saída: 10</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>Perfeito! 👌
+Aqui está o <strong>código completo em linguagem C</strong> para o exercício <strong>P03 – Contador de Vogais</strong>.
+O programa lê uma string e conta quantas vogais (<code>a, e, i, o, u</code>) existem nela, ignorando maiúsculas e minúsculas.</p>
+
+<h2>🧩 <strong>P03 – Contador de Vogais (em C)</strong></h2>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-c code-block hljs" style="display: block;" data-highlighted="yes"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;ctype.h&gt;</span> <span class="hljs-comment">// para tolower()</span></span>
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+    <span class="hljs-type">char</span> texto[<span class="hljs-number">200</span>];
+    <span class="hljs-type">int</span> contador = <span class="hljs-number">0</span>;
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"=== Contador de Vogais ===\n"</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Digite uma frase: "</span>);
+    
+    <span class="hljs-comment">// Lê a linha inteira (inclusive espaços)</span>
+    fgets(texto, <span class="hljs-keyword">sizeof</span>(texto), <span class="hljs-built_in">stdin</span>);
+
+    <span class="hljs-comment">// Percorre cada caractere da string</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; texto[i] != <span class="hljs-string">'\0'</span>; i++) {
+        <span class="hljs-type">char</span> c = <span class="hljs-built_in">tolower</span>(texto[i]); <span class="hljs-comment">// converte para minúscula</span>
+        <span class="hljs-keyword">if</span> (c == <span class="hljs-string">'a'</span> || c == <span class="hljs-string">'e'</span> || c == <span class="hljs-string">'i'</span> || c == <span class="hljs-string">'o'</span> || c == <span class="hljs-string">'u'</span>) {
+            contador++;
+        }
+    }
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Quantidade de vogais: %d\n"</span>, contador);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+
+<h2>💡 <strong>Exemplos de execução</strong></h2>
+<h3>Entrada:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-ebnf" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">ChatGPT</span>
+</code></pre>
+<h3>Saída:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">Quantidade</span> de vogais: <span class="hljs-number">1</span>
+</code></pre>
+
+<h3>Entrada:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-undefined" style="display: block;" data-highlighted="yes">Inteligência Artificial
+</code></pre>
+<h3>Saída:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">Quantidade</span> de vogais: <span class="hljs-number">10</span>
+</code></pre>
+
+<h2>⚙️ <strong>Como compilar e executar</strong></h2>
+<p>No terminal (Linux/macOS):</p>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-bash code-block hljs" style="display: block;" data-highlighted="yes">gcc contador_vogais.c -o contador_vogais
+./contador_vogais
+</code></pre>
+<p>No Windows (Prompt de Comando):</p>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-bash code-block hljs" style="display: block;" data-highlighted="yes">gcc contador_vogais.c -o contador_vogais.exe
+contador_vogais.exe
+</code></pre>
+
+<p>Quer que eu faça uma <strong>versão que também mostra quais são as vogais encontradas</strong> (por exemplo: <code>Vogais encontradas: a, e, i, i, a</code>)?</p></div>
+        </div>
+      
+          </div>
+        </body>
+      </html>
+    

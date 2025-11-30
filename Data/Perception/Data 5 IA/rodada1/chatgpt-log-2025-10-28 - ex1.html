@@ -1,0 +1,397 @@
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>ChatGPT Conversation Log</title>
+          <style>
+            :root {
+              --primary-color: #FFF;
+              --user-color: #ff3333;
+              --font-size: 16px;
+            }
+          
+            body {
+              font-family: ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;
+              font-size: var(--font-size);
+              background-color: #212121;
+              color: var(--primary-color);
+              padding: 20px;
+              margin: 0 auto;
+              line-height: 1.5;
+            }
+            .header {
+              text-align: center;
+              margin-bottom: 30px;
+              border-bottom: 2px dashed var(--primary-color);
+              padding-bottom: 15px;
+              max-width: 1200px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .title {
+              font-size: 24px;
+              font-weight: bold;
+              margin: 0;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            }
+            .timestamp {
+              color: #00cc00;
+              font-size: 14px;
+              margin-top: 10px;
+            }
+            .conversation {
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 20px;
+            }
+            .message {
+              margin-bottom: 20px;
+              padding: 10px 20px;
+              border-radius: 18px;
+              width: fit-content;
+              max-width: 80%;
+              clear: both;
+              overflow: hidden;
+            }
+            .user-message {
+              float: right;
+              background-color: #303030;
+            }
+            .assistant-message {
+              float: left;
+            }
+            .role {
+              font-weight: bold;
+              margin-bottom: 5px;
+              text-transform: uppercase;
+            }
+            .user-message .role {
+              color: #ff3333;
+              text-align: right;
+            }
+            .assistant-message .role {
+              color: var(--primary-color);
+            }
+            .content {
+              user-select: text;
+              word-wrap: break-word;
+            }
+            table {
+              border: 1px solid var(--primary-color);
+              border-collapse: collapse;
+              width: 100%;
+              margin: 1em 0;
+              table-layout: fixed;
+            }
+            th, td {
+                border: 1px solid var(--primary-color);
+                text-align: center;
+                height: 30px;
+                vertical-align: middle;
+                padding: 0 10px;
+            }
+            .content h1 { font-size: 2em; margin: 0.67em 0; }
+            .content h2 { font-size: 1.5em; margin: 0.75em 0; }
+            .content h3 { font-size: 1.17em; margin: 0.83em 0; }
+            .content h4 { font-size: 1em; margin: 1.12em 0; }
+            .content h5 { font-size: 0.83em; margin: 1.5em 0; }
+            .content h6 { font-size: 0.75em; margin: 1.67em 0; }
+            .code-block {
+              background-color: #2a2a2a !important;
+              color: #fff !important;
+              padding: 15px !important;
+              margin: 10px 0 !important;
+              border-radius: 5px !important;
+              border: 1px solid var(--primary-color) !important;
+              font-family: "Courier New", monospace !important;
+              overflow-x: auto !important;
+              width: auto !important;
+              max-width: 100% !important;
+              box-sizing: border-box !important;
+            }
+            li{
+              margin:15px 0;
+            }
+            .inline-code{
+              background: var(--primary-color);
+              color:#000;
+              padding:2px 5px;
+            }
+            /* Basic highlight.js theme */
+            .hljs {
+              background: transparent;
+              color: #fff;
+            }
+            .hljs-keyword { color: #ff79c6; }
+            .hljs-string { color: #f1fa8c; }
+            .hljs-number { color: #bd93f9; }
+            .hljs-function { color: #50fa7b; }
+            .hljs-comment { color: #6272a4; }
+            .hljs-title { color: #50fa7b; }
+            .hljs-params { color: #f8f8f2; }
+            .hljs-built_in { color: #8be9fd; }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <h1 class="title">== ChatGPT Log ==</h1>
+            <div class="timestamp">[27/10/2025, 23:40:50]</div>
+          </div>
+          <div class="conversation">
+    
+        <div class="message user-message">
+          <div class="content">Como é feito o calculo de Mdc?</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>O <strong>MDC</strong> (ou <strong>máximo divisor comum</strong>) de dois ou mais números é o <strong>maior número inteiro que divide todos eles sem deixar resto</strong>.
+Existem <strong>vários métodos</strong> para calcular o MDC — vou te mostrar os principais 👇</p>
+
+<h3>🧮 <strong>1. Método da Decomposição em Fatores Primos</strong></h3>
+<p>Passo a passo:</p>
+<ol>
+<li>
+<p>Decompõe cada número em fatores primos.</p>
+</li>
+<li>
+<p>Encontra os <strong>fatores comuns</strong>.</p>
+</li>
+<li>
+<p>Multiplica os <strong>menores expoentes</strong> desses fatores.</p>
+</li>
+</ol>
+<p><strong>Exemplo:</strong>
+Calcular o MDC de <strong>60</strong> e <strong>48</strong></p>
+<p>👉 60 = 2² × 3 × 5
+👉 48 = 2⁴ × 3</p>
+<p><strong>Fatores comuns:</strong> 2 e 3
+<strong>Menores expoentes:</strong> 2² e 3¹</p>
+<p>✅ MDC = 2² × 3 = <strong>12</strong></p>
+
+<h3>⚙️ <strong>2. Método das Divisões Sucessivas (ou Algoritmo de Euclides)</strong></h3>
+<p>Mais rápido, principalmente para números grandes.</p>
+<p>Passo a passo:</p>
+<ol>
+<li>
+<p>Divide o maior número pelo menor.</p>
+</li>
+<li>
+<p>Substitui o maior número pelo <strong>resto da divisão</strong>.</p>
+</li>
+<li>
+<p>Repete o processo até o resto ser <strong>zero</strong>.</p>
+</li>
+<li>
+<p>O <strong>último divisor não nulo</strong> é o MDC.</p>
+</li>
+</ol>
+<p><strong>Exemplo:</strong>
+Calcular o MDC de <strong>60</strong> e <strong>48</strong></p>
+<ul>
+<li>
+<p>60 ÷ 48 = 1, resto 12</p>
+</li>
+<li>
+<p>48 ÷ 12 = 4, resto 0</p>
+</li>
+</ul>
+<p>✅ <strong>MDC = 12</strong></p>
+
+<h3>📏 <strong>3. Método das Listas de Divisores</strong> (bom para números pequenos)</h3>
+<ol>
+<li>
+<p>Lista todos os divisores de cada número.</p>
+</li>
+<li>
+<p>Encontra os comuns.</p>
+</li>
+<li>
+<p>Escolhe o maior.</p>
+</li>
+</ol>
+<p><strong>Exemplo:</strong>
+60 → divisores: 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60
+48 → divisores: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48
+✅ Comuns: 1, 2, 3, 4, 6, 12 → <strong>MDC = 12</strong></p>
+
+<p>Se quiser, posso te mostrar <strong>como calcular o MDC de três ou mais números</strong>, ou montar um <strong>algoritmo passo a passo (em Python, por exemplo)</strong>.
+Quer que eu mostre isso também?</p></div>
+        </div>
+      
+        <div class="message user-message">
+          <div class="content">como implementar isso em c?</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>Ótima pergunta! 👏
+A forma mais prática e eficiente de calcular o <strong>MDC em C</strong> é usando o <strong>Algoritmo de Euclides</strong>, que é simples e rápido.</p>
+<p>Aqui está o passo a passo e o código:</p>
+
+<h3>💡 <strong>Lógica (Algoritmo de Euclides)</strong></h3>
+<p>A ideia é:</p>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-mipsasm" style="display: block;" data-highlighted="yes">mdc(a, <span class="hljs-keyword">b) </span>= mdc(<span class="hljs-keyword">b, </span>a % <span class="hljs-keyword">b)
+</span></code></pre>
+<p>até que <code>b</code> seja igual a <code>0</code>.
+Quando <code>b == 0</code>, o valor de <code>a</code> é o MDC.</p>
+
+<h3>🧑‍💻 <strong>Implementação em C</strong></h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-c code-block hljs" style="display: block;" data-highlighted="yes"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-comment">// Função para calcular o MDC usando o algoritmo de Euclides</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">mdc</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> {
+    <span class="hljs-keyword">while</span> (b != <span class="hljs-number">0</span>) {
+        <span class="hljs-type">int</span> resto = a % b;
+        a = b;
+        b = resto;
+    }
+    <span class="hljs-keyword">return</span> a;
+}
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+    <span class="hljs-type">int</span> x, y;
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Digite dois numeros: "</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;x, &amp;y);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"O MDC de %d e %d eh: %d\n"</span>, x, y, mdc(x, y));
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+
+<h3>🧠 <strong>Explicando o código:</strong></h3>
+<ol>
+<li>
+<p>A função <code>mdc(a, b)</code> recebe dois inteiros.</p>
+</li>
+<li>
+<p>Enquanto <code>b</code> for diferente de zero:</p>
+<ul>
+<li>
+<p>Calcula o <strong>resto da divisão</strong> (<code>a % b</code>);</p>
+</li>
+<li>
+<p>Substitui <code>a</code> por <code>b</code> e <code>b</code> pelo resto.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Quando <code>b</code> vira 0, <code>a</code> contém o MDC.</p>
+</li>
+<li>
+<p>O programa lê dois números do usuário e exibe o resultado.</p>
+</li>
+</ol>
+
+<h3>📈 <strong>Exemplo de execução</strong></h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">Digite</span> dois numeros: <span class="hljs-number">60</span> <span class="hljs-number">48</span>
+<span class="hljs-attribute">O</span> MDC de <span class="hljs-number">60</span> e <span class="hljs-number">48</span> eh: <span class="hljs-number">12</span>
+</code></pre>
+
+<p>Se quiser, posso te mostrar também como adaptar o código para calcular o <strong>MDC de 3 ou mais números</strong> (por exemplo, de uma lista de inteiros).
+Quer que eu te mostre isso também?</p></div>
+        </div>
+      
+        <div class="message user-message">
+          <div class="content">implemente o tdd</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>Excelente! 👏
+Usar <strong>TDD (Test-Driven Development)</strong> em C é uma ótima prática para garantir que seu código funcione corretamente desde o início.</p>
+<p>Vamos implementar o <strong>MDC com TDD passo a passo</strong>, usando apenas C puro (sem frameworks, para manter simples).</p>
+
+<h2>🧩 Etapas do TDD</h2>
+<p>O ciclo do TDD é:</p>
+<ol>
+<li>
+<p><strong>Red</strong> → Escreva um teste que <em>falhe</em> (a funcionalidade ainda não existe).</p>
+</li>
+<li>
+<p><strong>Green</strong> → Implemente o código mínimo para o teste passar.</p>
+</li>
+<li>
+<p><strong>Refactor</strong> → Melhore o código mantendo todos os testes passando.</p>
+</li>
+</ol>
+
+<h2>🧪 Passo 1 – Criar o arquivo de testes</h2>
+<p><strong>Arquivo:</strong> <code>test_mdc.c</code></p>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-c code-block hljs" style="display: block;" data-highlighted="yes"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;assert.h&gt;</span></span>
+
+<span class="hljs-comment">// Declaração da função que será implementada</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">mdc</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;
+
+<span class="hljs-type">void</span> <span class="hljs-title function_">test_mdc_basico</span><span class="hljs-params">()</span> {
+    assert(mdc(<span class="hljs-number">60</span>, <span class="hljs-number">48</span>) == <span class="hljs-number">12</span>);
+    assert(mdc(<span class="hljs-number">48</span>, <span class="hljs-number">18</span>) == <span class="hljs-number">6</span>);
+    assert(mdc(<span class="hljs-number">25</span>, <span class="hljs-number">5</span>) == <span class="hljs-number">5</span>);
+    assert(mdc(<span class="hljs-number">17</span>, <span class="hljs-number">13</span>) == <span class="hljs-number">1</span>); <span class="hljs-comment">// números primos</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"✅ Teste básico passou!\n"</span>);
+}
+
+<span class="hljs-type">void</span> <span class="hljs-title function_">test_mdc_com_zero</span><span class="hljs-params">()</span> {
+    assert(mdc(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>) == <span class="hljs-number">5</span>);
+    assert(mdc(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>) == <span class="hljs-number">5</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"✅ Teste com zero passou!\n"</span>);
+}
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+    test_mdc_basico();
+    test_mdc_com_zero();
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"🎉 Todos os testes passaram!\n"</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>👉 Aqui usamos <code>assert()</code> da biblioteca padrão — se o teste falhar, o programa é interrompido automaticamente.</p>
+
+<h2>💻 Passo 2 – Implementar a função <code>mdc</code></h2>
+<p><strong>Arquivo:</strong> <code>mdc.c</code></p>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-c code-block hljs" style="display: block;" data-highlighted="yes"><span class="hljs-type">int</span> <span class="hljs-title function_">mdc</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> {
+    <span class="hljs-keyword">if</span> (a == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> b;
+    <span class="hljs-keyword">if</span> (b == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> a;
+
+    <span class="hljs-keyword">while</span> (b != <span class="hljs-number">0</span>) {
+        <span class="hljs-type">int</span> resto = a % b;
+        a = b;
+        b = resto;
+    }
+    <span class="hljs-keyword">return</span> a;
+}
+</code></pre>
+
+<h2>⚙️ Passo 3 – Compilar e testar</h2>
+<p>No terminal, compile ambos os arquivos juntos:</p>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-bash code-block hljs" style="display: block;" data-highlighted="yes">gcc test_mdc.c mdc.c -o test_mdc
+./test_mdc
+</code></pre>
+<p>Saída esperada:</p>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-erlang-repl" style="display: block;" data-highlighted="yes">✅ Teste básico passou!
+✅ Teste com zero passou!
+🎉 Todos os testes passaram!
+</code></pre>
+
+<h2>🧠 O que aprendemos</h2>
+<ul>
+<li>
+<p>O TDD em C segue o mesmo ciclo de linguagens mais modernas.</p>
+</li>
+<li>
+<p>Usamos <code>assert()</code> para criar testes rápidos sem bibliotecas externas.</p>
+</li>
+<li>
+<p>Mantivemos o código modular: uma função (<code>mdc.c</code>) e um arquivo de testes (<code>test_mdc.c</code>).</p>
+</li>
+</ul>
+
+<p>Se quiser, posso mostrar como <strong>automatizar os testes</strong> (ex: com <code>Makefile</code>) ou <strong>adicionar uma suíte de testes maior</strong> usando um framework de teste em C (como <strong>Unity</strong> ou <strong>CMocka</strong>).</p>
+<p>Quer que eu te mostre a versão com framework também?</p></div>
+        </div>
+      
+          </div>
+        </body>
+      </html>
+    

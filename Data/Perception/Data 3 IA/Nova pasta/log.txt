@@ -1,0 +1,78 @@
+Pular para o conteúdo
+Você disse:
+ printf("Digite um numero inteiro positivo: ");
+    scanf("%d", &numero);
+
+    if (numero <= 0) {
+        printf("O numero deve ser positivo!\n");
+        return 1;
+    }
+
+
+    while (numero > 0) {
+        digito = numero % 10;
+        soma += digito;
+        numero /= 10;
+    }
+
+    printf("A soma dos digitos eh: %d\n", soma);
+
+fazer teste de mesa
+O ChatGPT disse:
+Perfeito 👍 Vamos fazer um teste de mesa (ou “rastreamento”) para esse código em C.
+
+O código completo (organizado) seria algo assim:
+
+#include <stdio.h>
+
+int main() {
+    int numero, digito, soma = 0;
+
+    printf("Digite um numero inteiro positivo: ");
+    scanf("%d", &numero);
+
+    if (numero <= 0) {
+        printf("O numero deve ser positivo!\n");
+        return 1;
+    }
+
+    while (numero > 0) {
+        digito = numero % 10;
+        soma += digito;
+        numero /= 10;
+    }
+
+    printf("A soma dos digitos eh: %d\n", soma);
+
+    return 0;
+}
+🧮 Teste de Mesa
+Vamos escolher um valor de entrada, por exemplo:
+➡️ numero = 538
+
+Tabela do teste de mesa
+Passo	número	digito = número % 10	soma (antes)	soma (depois)	número /= 10
+Inicial	538	—	0	0	—
+1	538	8	0	8	53
+2	53	3	8	11	5
+3	5	5	11	16	0
+Resultado final
+soma = 16
+
+Saída esperada no console:
+Digite um numero inteiro positivo: 538
+A soma dos digitos eh: 16
+Se quiser, posso montar uma versão com outro número (por exemplo, 907, 1002 etc.) para mostrar o passo a passo — quer que eu faça mais um exemplo?
+
+
+
+
+Anexar
+
+Buscar
+
+Estudar
+
+Voz
+Nenhum arquivo escolhidoNenhum arquivo escolhido
+O ChatGPT pode cometer erros. Por isso, lembre-se de conferir informações relevantes.

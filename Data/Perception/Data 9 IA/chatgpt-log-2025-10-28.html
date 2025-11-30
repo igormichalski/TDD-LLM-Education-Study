@@ -1,0 +1,280 @@
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>ChatGPT Conversation Log</title>
+          <style>
+            :root {
+              --primary-color: #FFF;
+              --user-color: #ff3333;
+              --font-size: 16px;
+            }
+          
+            body {
+              font-family: ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;
+              font-size: var(--font-size);
+              background-color: #212121;
+              color: var(--primary-color);
+              padding: 20px;
+              margin: 0 auto;
+              line-height: 1.5;
+            }
+            .header {
+              text-align: center;
+              margin-bottom: 30px;
+              border-bottom: 2px dashed var(--primary-color);
+              padding-bottom: 15px;
+              max-width: 1200px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .title {
+              font-size: 24px;
+              font-weight: bold;
+              margin: 0;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            }
+            .timestamp {
+              color: #00cc00;
+              font-size: 14px;
+              margin-top: 10px;
+            }
+            .conversation {
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 20px;
+            }
+            .message {
+              margin-bottom: 20px;
+              padding: 10px 20px;
+              border-radius: 18px;
+              width: fit-content;
+              max-width: 80%;
+              clear: both;
+              overflow: hidden;
+            }
+            .user-message {
+              float: right;
+              background-color: #303030;
+            }
+            .assistant-message {
+              float: left;
+            }
+            .role {
+              font-weight: bold;
+              margin-bottom: 5px;
+              text-transform: uppercase;
+            }
+            .user-message .role {
+              color: #ff3333;
+              text-align: right;
+            }
+            .assistant-message .role {
+              color: var(--primary-color);
+            }
+            .content {
+              user-select: text;
+              word-wrap: break-word;
+            }
+            table {
+              border: 1px solid var(--primary-color);
+              border-collapse: collapse;
+              width: 100%;
+              margin: 1em 0;
+              table-layout: fixed;
+            }
+            th, td {
+                border: 1px solid var(--primary-color);
+                text-align: center;
+                height: 30px;
+                vertical-align: middle;
+                padding: 0 10px;
+            }
+            .content h1 { font-size: 2em; margin: 0.67em 0; }
+            .content h2 { font-size: 1.5em; margin: 0.75em 0; }
+            .content h3 { font-size: 1.17em; margin: 0.83em 0; }
+            .content h4 { font-size: 1em; margin: 1.12em 0; }
+            .content h5 { font-size: 0.83em; margin: 1.5em 0; }
+            .content h6 { font-size: 0.75em; margin: 1.67em 0; }
+            .code-block {
+              background-color: #2a2a2a !important;
+              color: #fff !important;
+              padding: 15px !important;
+              margin: 10px 0 !important;
+              border-radius: 5px !important;
+              border: 1px solid var(--primary-color) !important;
+              font-family: "Courier New", monospace !important;
+              overflow-x: auto !important;
+              width: auto !important;
+              max-width: 100% !important;
+              box-sizing: border-box !important;
+            }
+            li{
+              margin:15px 0;
+            }
+            .inline-code{
+              background: var(--primary-color);
+              color:#000;
+              padding:2px 5px;
+            }
+            /* Basic highlight.js theme */
+            .hljs {
+              background: transparent;
+              color: #fff;
+            }
+            .hljs-keyword { color: #ff79c6; }
+            .hljs-string { color: #f1fa8c; }
+            .hljs-number { color: #bd93f9; }
+            .hljs-function { color: #50fa7b; }
+            .hljs-comment { color: #6272a4; }
+            .hljs-title { color: #50fa7b; }
+            .hljs-params { color: #f8f8f2; }
+            .hljs-built_in { color: #8be9fd; }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <h1 class="title">== ChatGPT Log ==</h1>
+            <div class="timestamp">[27/10/2025, 23:45:27]</div>
+          </div>
+          <div class="conversation">
+    
+        <div class="message user-message">
+          <div class="content">me ajude a criar uma função em C para calcule o Máximo Divisor Comum (MDC) Exemplos:
+
+    Entrada: 12 18 → Saída: 6</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>Claro! 😊
+O <strong>Máximo Divisor Comum (MDC)</strong> entre dois números pode ser calculado de forma simples usando o <strong>algoritmo de Euclides</strong>, que é bem eficiente.</p>
+<p>Aqui está uma função em <strong>C</strong> que faz isso, junto com um exemplo completo de uso:</p>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-c code-block hljs" style="display: block;" data-highlighted="yes"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-comment">// Função que calcula o MDC usando o algoritmo de Euclides</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">mdc</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> {
+    <span class="hljs-keyword">while</span> (b != <span class="hljs-number">0</span>) {
+        <span class="hljs-type">int</span> resto = a % b;
+        a = b;
+        b = resto;
+    }
+    <span class="hljs-keyword">return</span> a;
+}
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+    <span class="hljs-type">int</span> x, y;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Digite dois numeros: "</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;x, &amp;y);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"MDC(%d, %d) = %d\n"</span>, x, y, mdc(x, y));
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3>💡 Como funciona:</h3>
+<ul>
+<li>
+<p>O algoritmo de Euclides diz que:</p>
+MDC(a,b)=MDC(b,a%b)
+<p>até que b=0.
+Nesse ponto, a é o MDC.</p>
+</li>
+</ul>
+<h3>🧮 Exemplo:</h3>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-apache" style="display: block;" data-highlighted="yes"><span class="hljs-attribute">Entrada</span>: <span class="hljs-number">12</span> <span class="hljs-number">18</span>
+<span class="hljs-attribute">Sa</span>ída: MDC(<span class="hljs-number">12</span>, <span class="hljs-number">18</span>) = <span class="hljs-number">6</span>
+</code></pre>
+<p>Se quiser, posso te mostrar também uma <strong>versão recursiva</strong> da função — mais curta e elegante. Quer que eu mostre essa também?</p></div>
+        </div>
+      
+        <div class="message user-message">
+          <div class="content">qual é a formular pra mdc</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>Boa pergunta! 👏</p>
+<p>A <strong>fórmula</strong> (ou relação matemática) usada para calcular o <strong>Máximo Divisor Comum (MDC)</strong> é baseada no <strong>algoritmo de Euclides</strong>.
+Ela se expressa assim:</p>
+MDC(a,b)={a,MDC(b,amodb),​se&nbsp;b=0se&nbsp;b=0​
+
+<h3>💡 Explicando:</h3>
+<ul>
+<li>
+<p>amodb significa <strong>o resto da divisão de a por b</strong>.</p>
+</li>
+<li>
+<p>Você repete o processo substituindo a por b e b por amodb, até o resto ser zero.</p>
+</li>
+<li>
+<p>Quando o resto for zero, o <strong>MDC</strong> é o <strong>último divisor não nulo</strong>.</p>
+</li>
+</ul>
+
+<h3>🧮 Exemplo prático:</h3>
+<p>Calcular o MDC de 12 e 18:</p>
+18mod1212mod6​=6=0​
+<p>➡️ Portanto, MDC(12,18)=6</p>
+
+<p>Se quiser, posso te mostrar como essa fórmula se aplica passo a passo em um exemplo maior, tipo MDC(270,192). Quer que eu mostre?</p></div>
+        </div>
+      
+        <div class="message user-message">
+          <div class="content">agora usando assert</div>
+        </div>
+      
+        <div class="message assistant-message">
+          <div class="content"><p>Perfeito 👍
+Você pode usar <strong><code>assert</code></strong> em C para <strong>testar automaticamente</strong> se sua função de MDC está retornando o valor correto.</p>
+<p>A biblioteca <code>&lt;assert.h&gt;</code> permite verificar se uma expressão é verdadeira — se for falsa, o programa para e mostra um erro, ajudando muito em testes.</p>
+<p>Aqui vai o exemplo completo com <code>assert</code>:</p>
+<pre class="overflow-visible!"><code class="whitespace-pre! language-c code-block hljs" style="display: block;" data-highlighted="yes"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;assert.h&gt;</span></span>
+
+<span class="hljs-comment">// Função que calcula o MDC usando o algoritmo de Euclides</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">mdc</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> {
+    <span class="hljs-keyword">while</span> (b != <span class="hljs-number">0</span>) {
+        <span class="hljs-type">int</span> resto = a % b;
+        a = b;
+        b = resto;
+    }
+    <span class="hljs-keyword">return</span> a;
+}
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+    <span class="hljs-comment">// Testes automáticos com assert</span>
+    assert(mdc(<span class="hljs-number">12</span>, <span class="hljs-number">18</span>) == <span class="hljs-number">6</span>);
+    assert(mdc(<span class="hljs-number">100</span>, <span class="hljs-number">25</span>) == <span class="hljs-number">25</span>);
+    assert(mdc(<span class="hljs-number">7</span>, <span class="hljs-number">13</span>) == <span class="hljs-number">1</span>);
+    assert(mdc(<span class="hljs-number">81</span>, <span class="hljs-number">27</span>) == <span class="hljs-number">27</span>);
+    assert(mdc(<span class="hljs-number">270</span>, <span class="hljs-number">192</span>) == <span class="hljs-number">6</span>);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Todos os testes passaram com sucesso! ✅\n"</span>);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+
+<h3>🧩 Como funciona:</h3>
+<ul>
+<li>
+<p>Cada <code>assert(condição)</code> verifica se a condição é <strong>verdadeira</strong>.</p>
+</li>
+<li>
+<p>Se for <strong>falsa</strong>, o programa <strong>interrompe</strong> e exibe uma mensagem de erro, indicando qual teste falhou.</p>
+</li>
+<li>
+<p>Se <strong>todas passarem</strong>, você verá:</p>
+<pre class="overflow-visible!"><code class="whitespace-pre! code-block hljs language-avrasm" style="display: block;" data-highlighted="yes">Todos os testes passaram <span class="hljs-keyword">com</span> sucesso! ✅
+</code></pre>
+</li>
+</ul>
+
+<p>Quer que eu te mostre uma <strong>versão com testes automáticos mais organizados</strong>, usando um loop com casos de teste (como se fosse uma mini suite de testes)?</p></div>
+        </div>
+      
+          </div>
+        </body>
+      </html>
+    
