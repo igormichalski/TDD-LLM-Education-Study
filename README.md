@@ -12,7 +12,7 @@ use of generative AI tools in introductory programming education.
 
 ### `Data/`
 - `Data Google Colab (Applied Rubric)/` – Results from rubric scoring.  
-- `Perception/` – Student perception and Likert responses.  
+- `Perception/` – Perception.  
 - `Survey/` – Characterization and general survey data.  
 (All data is fully anonymized.)
 
@@ -24,8 +24,4 @@ Questionnaires, rubrics, and instructions used during the study.
 - `tests/` – Test suites used for correctness and robustness evaluation.
 
 ## 🔐 Ethics
-All participant data has been anonymized (IDs: `S01`, `S02`, ...).
-
-## 📄 License
-- Code: MIT  
-- Data/Figures: CC BY 4.0
+All participant data has been anonymized
