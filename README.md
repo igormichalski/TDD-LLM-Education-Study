@@ -6,8 +6,6 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-<img src="imagem.png" alt="Project image example">
-
 This repository contains the anonymized datasets, analysis scripts, forms, and
 programming materials used in a study on Test-Driven Development (TDD) and the
 use of generative AI tools in introductory programming education.
