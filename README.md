@@ -47,9 +47,25 @@ We thank the following contributors:
         <sub><b>Kauan Henrique Teixeira</b></sub>
       </a>
     </td>
+    </td>
+     <td align="center">
+      <a href="https://github.com/igormichalski" title="Jorge Marques Prates">
+        <img src="https://avatars.githubusercontent.com/u/148873693?v=4" width="100px;" alt="Photo of Jorge Marques Prates"/><br>
+        <sub><b>Jorge Marques Prates</b></sub>
+      </a>
+    </td>
+     <td align="center">
+      <a href="https://github.com/igormichalski" title="Felipe Restrepo Calle">
+        <img src="https://avatars.githubusercontent.com/u/148873693?v=4" width="100px;" alt="Photo of Felipe Restrepo Calle"/><br>
+        <sub><b>Felipe Restrepo Calle</b></sub>
+      </a>
   </tr>
 </table>
 
 
 ## 🔐 Ethics
 All participant data has been anonymized
+
+## 📝 License
+This project is under the **CC0-1.0 License**.  
+See the file **LICENSE** for more details.
