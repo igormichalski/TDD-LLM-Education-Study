@@ -37,7 +37,7 @@ We thank the following contributors:
   <tr>
     <td align="center">
       <a href="https://github.com/igormichalski" title="Igor Michalski">
-        <img src="https://avatars.githubusercontent.com/u/148873693?v=4" width="100px;" alt="Photo of Igor Michalski"/><br>
+        <img src="https://avatars.githubusercontent.com/u/100472292?s=96&v=4" width="100px;" alt="Photo of Igor Michalski"/><br>
         <sub><b>Igor Roberto Michalski</b></sub>
       </a>
     </td>
