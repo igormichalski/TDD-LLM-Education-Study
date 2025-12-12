@@ -31,7 +31,7 @@ use of generative AI tools in introductory programming education.
 
 ## 🤝 Collaborators
 
-We thank the following contributors:
+Thank the following contributors:
 
 <table>
   <tr>
@@ -47,7 +47,6 @@ We thank the following contributors:
         <sub><b>Kauan Henrique Teixeira</b></sub>
       </a>
     </td>
-    </td>
      <td align="center">
       <a href="https://www.linkedin.com/in/jorge-m-prates/" title="Jorge Marques Prates">
         <img src="https://media.licdn.com/dms/image/v2/C4D03AQGm9ernj1GktA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1609435619639?e=1767225600&v=beta&t=mFjga2JbBI5P6WD19_WJ8tgzcETJyR5j6j4qNeN4QBc" width="100px;" alt="Photo of Jorge Marques Prates"/><br>
@@ -58,6 +57,12 @@ We thank the following contributors:
       <a href="https://github.com/ferestrepoca" title="Felipe Restrepo Calle">
         <img src="https://avatars.githubusercontent.com/u/11912846?v=4" width="100px;" alt="Photo of Felipe Restrepo Calle"/><br>
         <sub><b>Felipe Restrepo Calle</b></sub>
+      </a>
+    </td>
+         <td align="center">
+      <a href="https://github.com/VictorVendruscolo" title="Victor Rech Vendruscolo">
+        <img src="https://instagram.fdou2-1.fna.fbcdn.net/v/t51.2885-19/561989230_18391131079193623_6221033580623393446_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fdou2-1.fna.fbcdn.net&_nc_cat=107&_nc_oc=Q6cZ2QFrFzGDJVT2MaReSdhErIjAsdlaOGr8v4bQMtee2Grk_cLBRJZcOReRXxGZEej-nno&_nc_ohc=VlScRRBCMsQQ7kNvwEONPgH&_nc_gid=c384QaZSo5xjZd-xXmCH8w&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Afl4CTndEvbT4X5Gx9-D7yfesU20415ncAd4OGYJQucKDw&oe=6941FB36&_nc_sid=7a9f4b" width="100px;" alt="Photo of Victor Rech Vendruscolo"/><br>
+        <sub><b>Victor Rech Vendruscolo</b></sub>
       </a>
     </td>
   </tr>
