@@ -23,7 +23,7 @@ use of generative AI tools in introductory programming education.
 (All data is fully anonymized.)
 
 ### `Forms/`
-Questionnaires, rubrics, and instructions used during the study.
+- Questionnaires, rubrics, and instructions used during the study.
 
 ### `src/`
 - `problems/` – Programming tasks and reference materials.  
