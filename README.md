@@ -42,23 +42,24 @@ We thank the following contributors:
       </a>
     </td>
     <td align="center">
-      <a href="#" title="Kauan Henrique">
+      <a href="https://github.com/Kauandugi" title="Kauan Henrique">
         <img src="https://media.licdn.com/dms/image/v2/C4D03AQH89xnQzhuvtg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1634483233635?e=1767225600&v=beta&t=ltOIxOhL_WBV3Zwn2YZSopUgAStuFLLLUX8b7_QQOIs" width="100px;" alt="Photo of Kauan Henrique"/><br>
         <sub><b>Kauan Henrique Teixeira</b></sub>
       </a>
     </td>
     </td>
      <td align="center">
-      <a href="https://github.com/igormichalski" title="Jorge Marques Prates">
+      <a href="https://www.linkedin.com/in/jorge-m-prates/" title="Jorge Marques Prates">
         <img src="https://media.licdn.com/dms/image/v2/C4D03AQGm9ernj1GktA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1609435619639?e=1767225600&v=beta&t=mFjga2JbBI5P6WD19_WJ8tgzcETJyR5j6j4qNeN4QBc" width="100px;" alt="Photo of Jorge Marques Prates"/><br>
         <sub><b>Jorge Marques Prates</b></sub>
       </a>
     </td>
      <td align="center">
-      <a href="https://github.com/igormichalski" title="Felipe Restrepo Calle">
+      <a href="https://github.com/ferestrepoca" title="Felipe Restrepo Calle">
         <img src="https://avatars.githubusercontent.com/u/11912846?v=4" width="100px;" alt="Photo of Felipe Restrepo Calle"/><br>
         <sub><b>Felipe Restrepo Calle</b></sub>
       </a>
+    </td>
   </tr>
 </table>
 
