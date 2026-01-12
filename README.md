@@ -94,7 +94,7 @@ Programming tasks and reference tests used for the activities:
       </a>
     </td>
     <td align="center">
-      <a href="https://www.linkedin.com/in/jorge-m-prates/" title="Jorge Marques Prates">
+      <a href="https://github.com/VictorVendruscolo" title="Jorge Marques Prates">
         <img src="https://media.licdn.com/dms/image/v2/C4D03AQGm9ernj1GktA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1609435619639" width="100px;" alt="Photo of Jorge Marques Prates"/><br>
         <sub><b>Dr. Jorge Marques Prates</b></sub>
       </a>
@@ -112,7 +112,7 @@ Programming tasks and reference tests used for the activities:
       </a>
     </td>
       <td align="center">
-      <a href="https://github.com/erro" title="Silvana Morita Melo">
+      <a href="https://github.com/VictorVendruscolo" title="Silvana Morita Melo">
         <img src="https://avatars.githubusercontent.com/u/71718834?v=4" width="100px;" alt="Photo of Silvana Morita Melo"/><br>
         <sub><b>Silvana Morita Melo</b></sub>
       </a>
