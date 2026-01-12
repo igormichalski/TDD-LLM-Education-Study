@@ -15,21 +15,6 @@ The study materials are organized into **two instructional contexts**:
 
 ---
 
-## 📦 Repository structure (high level)
-
-```text
-.
-├── Analysis/                      # Analysis scripts + exported results
-├── Data/                          # Fully anonymized datasets (CSV + derived outputs)
-├── Forms/                         # PDF forms used in the study
-├── src/                           # Programming tasks + reference tests + utilities
-├── Rubric Table                   # Rubric table used for scoring (see note below)
-├── LICENSE
-└── README.md
-```
-
----
-
 ## 📂 Detailed structure
 
 ### `Analysis/`
@@ -42,9 +27,7 @@ Analysis content is separated by instructional context:
 - `Analysis/ShortCourse (Jest)/`
   - `scripts/` — data cleaning, rubric aggregation, and figure/table generation
   - `results/` — exported plots/tables used in the study
-
-> Tip: If you add a `requirements.txt` (or similar) in the future, you can document the exact reproduction steps here.
-
+    
 ---
 
 ### `Data/`
@@ -98,36 +81,6 @@ Programming tasks and reference tests used for the activities:
 The scoring rubric used in the study is included as **`Rubric Table`**.
 
 > Note: Consider renaming this file to something explicit like `Rubric-Table.pdf` or `Rubric-Table.xlsx` (and avoiding spaces) to improve portability.
-
----
-
-## ♻️ Reproducibility (recommended workflow)
-If you want to run the analysis locally:
-
-1. Inspect the scripts under:
-   - `Analysis/ShortCourse (Assert)/scripts/`
-   - `Analysis/ShortCourse (Jest)/scripts/`
-
-2. Ensure the scripts point to the correct input paths under `Data/`.
-
-3. Run scripts to generate outputs into each `results/` folder.
-
-> If you tell me what language/tools you used in `scripts/` (Python? R? notebooks?), I can add an exact “How to run” section with commands and environment setup.
-
----
-
-## 📣 How to cite
-If you are using these artifacts in academic work, please cite the associated paper:
-
-```bibtex
-@article{TODO,
-  title   = {TODO: Paper Title},
-  author  = {TODO: Authors},
-  journal = {TODO},
-  year    = {TODO},
-  note    = {Artifacts available at: https://github.com/igormichalski/TDD-LLM-Education-Study}
-}
-```
 
 ---
 
