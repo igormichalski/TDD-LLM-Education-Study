@@ -77,13 +77,6 @@ Programming tasks and reference tests used for the activities:
 
 ---
 
-## 🔎 Rubric
-The scoring rubric used in the study is included as **`Rubric Table`**.
-
-> Note: Consider renaming this file to something explicit like `Rubric-Table.pdf` or `Rubric-Table.xlsx` (and avoiding spaces) to improve portability.
-
----
-
 ## 🤝 Collaborators
 
 <table>
@@ -118,6 +111,11 @@ The scoring rubric used in the study is included as **`Rubric Table`**.
         <sub><b>Victor Rech Vendruscolo</b></sub>
       </a>
     </td>
+      <td align="center">
+      <a href="https://github.com/erro" title="Silvana Morita Melo">
+        <img src="https://avatars.githubusercontent.com/u/71718834?v=4" width="100px;" alt="Photo of Silvana Morita Melo"/><br>
+        <sub><b>Silvana Morita Melo</b></sub>
+      </a>
   </tr>
 </table>
 
