@@ -114,7 +114,7 @@ Programming tasks and reference tests used for the activities:
       <td align="center">
       <a href="https://orcid.org/0000-0001-5934-2564" title="Silvana Morita Melo">
         <img src="https://avatars.githubusercontent.com/u/71718834?v=4" width="100px;" alt="Photo of Silvana Morita Melo"/><br>
-        <sub><b>Silvana Morita Melo</b></sub>
+        <sub><b>Dra. Silvana Morita Melo</b></sub>
       </a>
   </tr>
 </table>
