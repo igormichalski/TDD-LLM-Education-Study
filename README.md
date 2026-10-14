@@ -15,6 +15,14 @@ The study materials are organized into **two instructional contexts**:
 
 ---
 
+## 📄 Paper
+
+These artifacts accompany the paper **"Exploring AI-Assisted Test-Driven Development in Introductory Programming Education"**, accepted at the Brazilian Symposium on Software Quality (SBQS 2026).
+
+- Author version: [`Paper/SBQS2026_Exploring_AI-Assisted_TDD.pdf`](Paper/SBQS2026_Exploring_AI-Assisted_TDD.pdf)
+
+---
+
 ## 📂 Detailed structure
 
 ### `Analysis/`
@@ -77,6 +85,14 @@ Programming tasks and reference tests used for the activities:
 
 ---
 
+## 📊 Data analysis
+
+The repository does not contain a program to be installed or executed: the source code, tests and logs in `Data/` and `src/` are study artefacts (participant submissions, reference tests and task statements) provided for inspection only.
+
+The only code used to produce results is the rubric analysis in `Analysis/*/scripts/` (`rubric.py` and `rubric_ifms.py`). These scripts were run in **Google Colab** (Python with pandas, NumPy, Matplotlib and seaborn, all preinstalled in Colab) using the rubric CSV files in `Data/*/Data Google Colab (Applied Rubric)/` as input. The resulting tables and figures reported in the paper are in `Analysis/*/results/`.
+
+---
+
 ## 🤝 Collaborators
 
 <table>
@@ -122,7 +138,7 @@ Programming tasks and reference tests used for the activities:
 ---
 
 ## 🔐 Ethics
-All participant data has been anonymized.
+Participants provided digital informed consent prior to participation. No identifiable data was collected; only anonymized AI interaction logs were recorded and publicly shared for scientific transparency.
 
 ---
 
