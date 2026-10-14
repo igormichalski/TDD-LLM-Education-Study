@@ -12,6 +12,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+pd.set_option("display.width", 200)
+pd.set_option("display.max_columns", None)
+
 df_g1_I = pd.read_csv("g1_Igor.csv")
 df_g1_K = pd.read_csv("g1_Kauan.csv")
 df_g2_I = pd.read_csv("g2_Igor.csv")
@@ -24,13 +27,13 @@ desc = df.groupby("group")[["correction","design","style","total"]].agg(
     ["mean","median","std","min","max"]
 ).round(2)
 
-desc
+print("Descriptive statistics by group:\n", desc)
 
 desc_all = df[["correction","design","style","total"]].agg(
     ["mean","median","std","min","max"]
 ).round(2)
 
-desc_all
+print("\nDescriptive statistics (all participants):\n", desc_all)
 
 df_long = df.melt(
     id_vars=["participant","group","rater","code"],
@@ -170,7 +173,7 @@ def descriptive_table(group_number):
 table_g1 = descriptive_table(1)
 table_g2 = descriptive_table(2)
 
-table_g1, table_g2
+print("\nGroup 1:\n", table_g1, "\n\nGroup 2:\n", table_g2)
 
 plt.figure(figsize=(10,6))
 sns.boxplot(
@@ -194,4 +197,4 @@ statistics = ["mean", "median", "std", "min", "max"]
 # Tabela descritiva combinando Group 1 + Group 2
 table_combined = df[criteria].agg(statistics).round(2)
 
-table_combined
+print("\nCombined table:\n", table_combined)
