@@ -1,4 +1,4 @@
-# TDD & Generative AI in Introductory Programming — Research Artifacts
+# Exploring AI-Assisted Test-Driven Development in Introductory Programming Education - Research Artifacts
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/igormichalski/TDD-LLM-Education-Study?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/igormichalski/TDD-LLM-Education-Study?style=for-the-badge)
